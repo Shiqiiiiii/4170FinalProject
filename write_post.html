@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.outter {
+  background-color: white;
+  width: 333px;
+  height: 716px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 2px solid black;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/* headers */
+header{
+    font-family: Stoke;
+    font-size: 34px;
+    text-align: center;
+    color: #000000;
+    float: left;
+    width: 333px;
+}
+#left_arrow{
+    position: absolute;
+    left: 10px;
+}
+#a_line{
+    width: 300px;
+    height: 1.5px;
+    background-color:black;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+#wap{
+    width: 290px;
+    margin-left: 20px;
+    margin-top: 110px;
+}
+#wap_title{
+    font-family: Stoke;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-left: 5px;
+    text-align: left;
+}
+#wap_box{
+    width: 290px;
+    height: 420px;
+    border: 1px solid black;
+}
+#wap_imgs{
+    float: left;
+}
+#pic{
+    float: left;
+    width: 120px;
+    height: 120px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+#pic2{
+    float: left;
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+    margin-left: 15px;
+    text-align: center;
+    border: 1px solid black;
+}
+#wap_text{
+    float: left;
+    width: 275px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    letter-spacing: -0.015em;
+}
+#wap_special{
+    float: left;
+    width: 290px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 30px;
+    text-align: center;
+    font-size: 12pt;
+}
+#submit{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16pt;
+    margin-left: 100px;
+}
+
+/* footers */
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 68px;
+  width: 333px;
+  background-color:#C4C4C4;
+  color: black;
+  float:left;  
+}
+div.footer_box {
+    float:left;  
+    font-family: Stoke;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    height: 63px;
+    width: 111px;
+    padding-top: 5px;
+    background-color: #979696;
+}
+div.footer_box2 {
+    float:left;  
+    font-family: Stoke;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    height: 63px;
+    width: 111px;
+    padding-top: 5px;
+}
+</style>
+</head>
+
+<body>
+  <div class='outter'>
+      <!-- Header -->
+      <header>
+        <a href="./home.html" id="left_arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 24 24" width="26"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+        </a>
+        <div class='benefit' style="margin-top: 20px;">Benefit - Posts</div>
+        <div id="a_line"></div>
+      </header>
+
+      <!-- Body -->
+      <div id="wap">
+          <div id='wap_title'>Write a post</div>
+          <div id='wap_box'>
+              <div id='wap_imgs'>
+                <div id="pic">
+                    <img src="./image/wholefoods.jpg" alt="MATLAB" width="120px" height="120px" id="res_img" style="margin-top: 5px;  margin-left: 1.5px;">
+                  </div>
+                  <div id="pic2">
+                    <svg style="margin-top: 45px;" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                  </div>
+              </div>
+              <div id='wap_text'>It is strawberry season now, and there is an extra 10% off in WholeFoods.</div>
+              <div id='wap_special'>
+                <svg style="float: left;" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+                <div style="margin-top: 3px; float: left;"> &nbsp; Ends on: <input type="date"></div>
+              </div>
+              <div id='wap_special'>
+                <svg style="float: left;" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <div style="margin-top: 3px; float: left;"> &nbsp; <input type="date" placeholder="Add a location"></div>
+              </div>
+              <div id='wap_special'>
+                <svg style="float: left;" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>                
+                <div style="margin-top: 3px; float: left;"> &nbsp; <input type="date" placeholder="Add some tags"></div>
+              </div>
+              <div>
+                <a href="./posts.html">
+                  <button type="submit" id="submit">Submit</button>
+                </ahref>
+            </div>
+            </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="./home(login).html">
+          <div class="footer_box">
+            <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 0 24 24" width="36"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <br>home
+          </div>
+        </a>
+        <a href="./posts.html">
+          <div class="footer_box2">
+            <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 0 24 24" width="36"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            <br>posts
+        </div>
+        </a>
+        <a  href="./user_pofile(benefit).html">
+          <div class="footer_box2">
+            <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 0 24 24" width="36"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"/></svg>
+            <br>me
+          </div>
+        </a>
+      </footer>
+  </div>
+</body>
+</html>
