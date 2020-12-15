@@ -48,23 +48,41 @@ div.description {
     float:left;
     font-size: 16px;
 }
-#input_text, #input_box{
+#input_text{
     float:left;  
-    margin-left: 45px;
+    margin-left: 28px;
     margin-top: 15px;
 }
-#buttons{
-  margin-top: 45px;
-  margin-left: 18px;
+#input_box1{
+    float:left;  
+    margin-left: 63px;
+    margin-top: 15px;
 }
-#submit_box{
+#input_box2{
+    float:left;  
+    margin-left: 10px;
+    margin-top: 15px;
+}
+#input_box3{
+    float:left;  
+    margin-left: 17px;
+    margin-top: 15px;
+}
+#schools{
+    margin-top: 15px;
+    margin-left: 80px;
+    font-size: 16px;
+}
+#buttons1{
     text-align: center;
+    margin-left: 16px;
 }
 #submit{
   float:left;
   text-align: center;
+  margin-top: 50px;
   margin-left: 20px;
-  height: 45px;
+  height: 40px;
   width: 120px;
   font-size: 18px;
   font-weight: bold;
@@ -75,7 +93,6 @@ div.description {
   border-radius: 5px;
   box-shadow: 0px 3px 5px grey;
 }
-/* footer */
 footer {
   position: fixed;
   bottom: 0;
@@ -116,32 +133,37 @@ div.footer_box2 {
         <div class='description'>Get to know what your school provides to you.</div>
       </div>
       <div>
-        <div id='login_big'> Login </div>
-        <div>
+        <div id='login_big'> Create User - School Admin</div>
+          <div>
             <div id='inputs'>
-                <div id="input_text">username</div>
-                <input type="text" id="input_box" placeholder="username">
+                <div id="input_text">*username</div>
+                <input type="text" id="input_box1" placeholder="username">
             </div>
             <div id='inputs'>
-                <div id="input_text">password</div>
-                <input type="text" id="input_box" placeholder="xxxxxxxx">
+                <div id="input_text">*password</div>
+                <input type="text" id="input_box1" placeholder="xxxxxxxx">
             </div>
-            <div id='submit_box' style="margin-top: 15px; letter-spacing: -0.01em;">
-              <a  href="./create_user(school).html">forget usernmae/password? Click here</a>
+            <div id='inputs'>
+                <div id="input_text">*confirm password</div>
+                <input type="text" id="input_box2" placeholder="xxxxxxxx">
             </div>
-              <div id="buttons">
-                <div>
-                  <a href="./user_pofile(benefit).html">
-                    <button type="submit" id="submit">Login</button>
-                  </a>
+            <div id='inputs'>
+                <div id="input_text">*verification code</div>
+                <input type="text" id="input_box3" placeholder="xxxxxxxx">
+            </div>
+            <div id="buttons1">
+              <div>
+                <a href="./create_user(type).html">
+                  <button type="submit" id="submit">Back</button>
+                </a>
               </div>
               <div>
-                  <a href="./create_user(school).html">
-                    <button type="submit" id="submit">Create User</button>
-                  </a>
+                <a href="./home(login).html">
+                  <button type="submit" id="submit">Register</button>
+                </a>
               </div>
             </div>
-        </div>
+          </div> 
       </div>
       <footer>
         <a href="./home(not login).html">

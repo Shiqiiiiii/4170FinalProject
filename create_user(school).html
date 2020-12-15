@@ -42,29 +42,26 @@ div.description {
     color: #000000;
     margin-bottom: 10px;
 }
+#description2{
+    margin-left: 60px;
+}
 #inputs{
     height: 45px;
     width: 333px;
-    float:left;
+    font-size: 16px;
+    text-align: center;
+}
+#schools{
+    margin-top: 40px;
     font-size: 16px;
 }
-#input_text, #input_box{
-    float:left;  
-    margin-left: 45px;
-    margin-top: 15px;
-}
-#buttons{
-  margin-top: 45px;
-  margin-left: 18px;
-}
-#submit_box{
+#buttons1{
     text-align: center;
 }
 #submit{
-  float:left;
   text-align: center;
-  margin-left: 20px;
-  height: 45px;
+  margin-top: 167px;
+  height: 40px;
   width: 120px;
   font-size: 18px;
   font-weight: bold;
@@ -75,7 +72,6 @@ div.description {
   border-radius: 5px;
   box-shadow: 0px 3px 5px grey;
 }
-/* footer */
 footer {
   position: fixed;
   bottom: 0;
@@ -116,32 +112,33 @@ div.footer_box2 {
         <div class='description'>Get to know what your school provides to you.</div>
       </div>
       <div>
-        <div id='login_big'> Login </div>
-        <div>
+        <div id='login_big'> Create User</div>
+        <div id='description2'>Choose which school you are in.</div>
+          <div>
             <div id='inputs'>
-                <div id="input_text">username</div>
-                <input type="text" id="input_box" placeholder="username">
+                <select id="schools">
+                    <option selected disabled>select your school</option>
+                    <option value="all">All Schools</option>
+                    <option value="ucb">UC Berkeley</option>
+                    <option value="uci">UC Irvine</option>
+                    <option value="ucla">UCLA</option>
+                    <option value="ucsd">UC San Diego</option>
+                    <option value="ucm">UC Merced</option>
+                    <option value="ucsf">UC San Francisco</option>
+                    <option value="ucsb">UC Santa Barbara</option>
+                    <option value="ucsc">UC Santa Cruz</option>
+                    <option value="ucr">UC Riverside</option>
+                    <option value="ucd">UC Davis</option>
+                  </select>
             </div>
-            <div id='inputs'>
-                <div id="input_text">password</div>
-                <input type="text" id="input_box" placeholder="xxxxxxxx">
-            </div>
-            <div id='submit_box' style="margin-top: 15px; letter-spacing: -0.01em;">
-              <a  href="./create_user(school).html">forget usernmae/password? Click here</a>
-            </div>
-              <div id="buttons">
-                <div>
-                  <a href="./user_pofile(benefit).html">
-                    <button type="submit" id="submit">Login</button>
-                  </a>
-              </div>
+            <div id="buttons1">
               <div>
-                  <a href="./create_user(school).html">
-                    <button type="submit" id="submit">Create User</button>
-                  </a>
+                <a href="./create_user(type).html">
+                  <button type="submit" id="submit">Next</button>
+                </a>
               </div>
             </div>
-        </div>
+          </div> 
       </div>
       <footer>
         <a href="./home(not login).html">

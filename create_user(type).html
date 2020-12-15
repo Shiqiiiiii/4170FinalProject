@@ -42,29 +42,40 @@ div.description {
     color: #000000;
     margin-bottom: 10px;
 }
+#description2{
+    text-align: center;
+    letter-spacing: -0.015em;
+    margin-bottom: 30px;
+}
 #inputs{
     height: 45px;
     width: 333px;
     float:left;
     font-size: 16px;
+    margin-top: 10px;
 }
-#input_text, #input_box{
-    float:left;  
-    margin-left: 45px;
-    margin-top: 15px;
+#input_box1{
+    float:left;
+    margin-top: 10px;
+    margin-left: 90px;
 }
-#buttons{
-  margin-top: 45px;
-  margin-left: 18px;
+#input_box2{
+    float:left;
+    margin-top: 10px;
+    margin-left: 90px;
 }
-#submit_box{
+#input_text{
+    float:left;
+    font-size: 24px;
+    margin-left: 25px;
+}
+#buttons1{
     text-align: center;
 }
 #submit{
-  float:left;
   text-align: center;
-  margin-left: 20px;
-  height: 45px;
+  margin-top: 72px;
+  height: 40px;
   width: 120px;
   font-size: 18px;
   font-weight: bold;
@@ -75,7 +86,6 @@ div.description {
   border-radius: 5px;
   box-shadow: 0px 3px 5px grey;
 }
-/* footer */
 footer {
   position: fixed;
   bottom: 0;
@@ -107,6 +117,17 @@ div.footer_box2 {
     padding-top: 5px;
 }
 </style>
+<script>
+        function redirectPage() {
+            var student = document.getElementById("input_box1");
+            var admin = document.getElementById("input_box2");
+            if(student.checked){
+                window.location = "./create_user(student).html";
+            }else if(admin.checked){
+                window.location = "./create_user(admin).html";
+            }
+        }
+</script>
 </head>
 
 <body>
@@ -116,32 +137,21 @@ div.footer_box2 {
         <div class='description'>Get to know what your school provides to you.</div>
       </div>
       <div>
-        <div id='login_big'> Login </div>
-        <div>
+        <div id='login_big'> Create User</div>
+        <div id='description2'>if you are a admin, we will verify in the later process</div>
+          <div id="formElem">
             <div id='inputs'>
-                <div id="input_text">username</div>
-                <input type="text" id="input_box" placeholder="username">
+                <input type="radio" id="input_box1" name="type" value="student">
+                <div id="input_text">Student</div>
             </div>
             <div id='inputs'>
-                <div id="input_text">password</div>
-                <input type="text" id="input_box" placeholder="xxxxxxxx">
+                <input type="radio" id="input_box2" name="type" value="admin">
+                <div id="input_text">School Admin</div>
             </div>
-            <div id='submit_box' style="margin-top: 15px; letter-spacing: -0.01em;">
-              <a  href="./create_user(school).html">forget usernmae/password? Click here</a>
+            <div id="buttons1">
+                <button type="button" id="submit" onclick="redirectPage()">Next</button>
             </div>
-              <div id="buttons">
-                <div>
-                  <a href="./user_pofile(benefit).html">
-                    <button type="submit" id="submit">Login</button>
-                  </a>
-              </div>
-              <div>
-                  <a href="./create_user(school).html">
-                    <button type="submit" id="submit">Create User</button>
-                  </a>
-              </div>
-            </div>
-        </div>
+          </div> 
       </div>
       <footer>
         <a href="./home(not login).html">
