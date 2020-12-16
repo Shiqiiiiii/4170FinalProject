@@ -41,38 +41,27 @@ header{
 /* headers2 */
 #search_bar{
   float:left;  
-  text-align: left;
+  text-align: center;
   height: 40px;
 }
 #search_svg, #search_input{
   float:left;  
-  text-align: left;
+  text-align: center;
+  width: 100px;
 }
 #search_box{
     margin-top: 10px;
     margin-bottom: 20px;
-    font-size: 12pt;
-    box-shadow: 2px 2px #888888;
-    width: 170px;
-    margin-right: 10px;
+    font-size: 20pt;
+    box-shadow: 5px 10px #888888;
 }
 #filters{
   width: 330px;
   color: black;
+  float:left; 
   margin-left: 7px;
   margin-bottom: 10px;
-  padding-right: 15px;
-  display: flex;
-  justify-content: center;
 }
-
-.filter {
-  max-width: 90px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-}
-
 #range, #distance, #time {
     float:left; 
 }
@@ -87,7 +76,7 @@ header{
 
 /* body */
 #search_result{
-    margin-top: 5px;
+    margin-top: 15px;
     overflow: auto; 
     height: 500px; 
     width: 333px;
@@ -179,36 +168,31 @@ div.footer_box2 {
           </button>
         </a>
       </div>
-
       <div id="filters">
         <div>
-            <select id="Category" class="filter">
-                <option selected disabled>Catogory</option>
-                <option value="AS">All catogories</option>
-                <option value="MS">Software</option>
-                <option value="BI">Grocery</option>
-                <option value="CL">Clothes</option>
+            <select id="range">
+                <option selected disabled>discount range</option>
+                <option value="AS">All students</option>
+                <option value="MS">My school</option>
+                <option value="BI">Both included</option>
               </select>
           </div>
           <div>
-            <select id="distance" class="filter">
-                <option selected disabled>Distance</option>
-                <option value="AI">All included</option>
-                <option value="AS">Online</option>
-                <option value="MS">1 mile</option>
-                <option value="BI">5 miles</option>
+            <select id="distance">
+                <option selected disabled>distance</option>
+                <option value="AS">online</option>
+                <option value="MS">less than 1 km</option>
+                <option value="BI">less than 5 kms</option>
               </select>
           </div>
           <div>
-            <select id="order" class="filter">
-                <option selected disabled>Order By</option>
-                <option value="BI">Most Relevant</option>
-                <option value="TI">Most Liked</option>
-                <option value="AS">Latest</option>
+            <select id="time">
+                <option selected disabled>post time</option>
+                <option value="AS">latest</option>
+                <option value="MS">earliest</option>
               </select>
           </div>
       </div>
-
       <div id='search_result'>
         <div id='one_column'>
           <div id='one_result'>
@@ -216,37 +200,33 @@ div.footer_box2 {
             <div id="res_text">In my high school, I need to pay for MATLAB. But with cwl in UBC I can use it for free now! That's awsone.</div>
             <div id="res_tag">
               <a href="./posts.html">#MATLAB</a>
+              <a href="./posts.html">#UBC</a>
             </div>
             <div id="res_tag">
-              <img src="./image/unliked.png" alt="unliked" width="10px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
-              40 likes
+              <input type="checkbox" id="like_check" checked>
+              Like
             </div>
           </div>
           <div id='one_result'>
-            <img src="./image/chairs.png" alt="staple" width="150px"id="res_img" style="margin-top: 5px;  margin-left: 1.5px;">
-            <div id="res_text">Staples online sale with student discount: up to 50% off. Follow the <a href="posts.html">link</a> to see what's on sale. </div>
+            <img src="./image/Topman Topshop.jpg" alt="MATLAB" width="150px"id="res_img" style="margin-top: 5px;  margin-left: 1.5px;">
+            <div id="res_text">I notice this at cashier, but I did not have my student id with me that day. So I decided to come back tomorrow. </div>
             <div id="res_tag">
-              <a href="./posts.html">#office</a>
-              <a href="./posts.html">#study</a>
-              <a href="./posts.html">#monitor</a>
-              <a href="./posts.html">#chairs</a>
+              <a href="./posts.html">#Topshop</a>
             </div>
             <div id="res_tag">
-              <img src="./image/liked.png" alt="liked" width="10px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
-                22 likes
+              <input type="checkbox" id="like_check">
+              Like
             </div>
           </div>
           <div id='one_result'>
-            <img src="./image/wholefoods.jpg" alt="WHOLEFOODS" width="150px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
+            <img src="./image/wholefoods.jpg" alt="MATLAB" width="150px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
             <div id="res_text">It is strawberry season now, and there is an extra 10% off in WholeFoods.</div>
             <div id="res_tag">
               <a href="./posts.html">#WholeFoods</a>
-              <a href="./posts.html">#Grocery</a>
-              <a href="./posts.html">#Strawberry</a>
             </div>
             <div id="res_tag">
-              <img src="./image/unliked.png" alt="unliked" width="10px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
-              14 likes
+              <input type="checkbox" id="like_check">
+              Like
             </div>
           </div>
         </div>
@@ -256,12 +236,10 @@ div.footer_box2 {
             <div id="res_text">It is strawberry season now, and there is an extra 10% off in WholeFoods.</div>
             <div id="res_tag">
               <a href="./posts.html">#WholeFoods</a>
-              <a href="./posts.html">#Grocery</a>
-              <a href="./posts.html">#Strawberry</a>
             </div>
             <div id="res_tag">
-              <img src="./image/liked.png" alt="liked" width="10px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
-                14 likes
+              <input type="checkbox" id="like_check">
+              Like
             </div>
           </div>
           <div id='one_result'>
@@ -269,16 +247,14 @@ div.footer_box2 {
             <div id="res_text">I notice this at cashier, but I did not have my student id with me that day. So I decided to come back tomorrow. </div>
             <div id="res_tag">
               <a href="./posts.html">#Topshop</a>
-              <a href="./posts.html">#Clothes</a>
             </div>
             <div id="res_tag">
-              <img src="./image/unliked.png" alt="unliked" width="10px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
-              3 likes
+              <input type="checkbox" id="like_check" checked>
+              Like
             </div>
           </div>
         </div>
       </div>
-     
 
       <footer>
         <a href="./home(login).html">
