@@ -4,7 +4,7 @@
 <style>
 div.outter {
   background-color: white;
-  width: 333px;
+  width: 340px;
   height: 716px;
   position: absolute;
   top: 50%;
@@ -88,10 +88,13 @@ header{
 
 /* body */
 #search_result{
+    display: flex;
+    justify-content: center;
     margin-top: 5px;
+    margin-left: 5px;
     overflow: auto; 
     height: 500px; 
-    width: 333px;
+    width: 335px;
     text-align: center;
 }
 #one_column{
@@ -171,7 +174,7 @@ div.footer_box2 {
         <div id="search_input" style="padding-left: 3px;">
           <input type="search" id="search_box" placeholder="Search User posts ..." size="12">
         </div>
-        <a href="./write_post.html">
+        <a href="./write_post(online).html">
           <button type="submit" id="write_post" >
             <div id='write_post_svg' style="padding-top:3px;">
               <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="16"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
@@ -238,7 +241,7 @@ div.footer_box2 {
             </div>
           </div>
           <div id='one_result'>
-            <img src="./image/wholefoods.jpg" alt="WHOLEFOODS" width="150px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
+            <a href="posts(popup).html"><img src="./image/wholefoods.jpg" alt="WHOLEFOODS" width="150px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;"></a>
             <div id="res_text">It is strawberry season now, and there is an extra 10% off in WholeFoods.</div>
             <div id="res_tag">
               <a href="./posts.html">#WholeFoods</a>
@@ -253,7 +256,7 @@ div.footer_box2 {
         </div>
         <div id='one_column'>
           <div id='one_result'>
-            <img src="./image/wholefoods.jpg" alt="MATLAB" width="150px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
+            <a href="posts(popup).html"><img src="./image/wholefoods.jpg" alt="MATLAB" width="150px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;"></a>
             <div id="res_text">It is strawberry season now, and there is an extra 10% off in WholeFoods.</div>
             <div id="res_tag">
               <a href="./posts.html">#WholeFoods</a>
