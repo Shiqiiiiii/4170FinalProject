@@ -4,7 +4,7 @@
 <style>
 div.outter {
   background-color: white;
-  width: 340px;
+  width: 333px;
   height: 716px;
   position: absolute;
   top: 50%;
@@ -88,13 +88,10 @@ header{
 
 /* body */
 #search_result{
-    display: flex;
-    justify-content: center;
     margin-top: 5px;
-    margin-left: 5px;
     overflow: auto; 
     height: 500px; 
-    width: 335px;
+    width: 333px;
     text-align: center;
 }
 #one_column{
@@ -118,9 +115,17 @@ header{
 #res_tag{
   text-align: left;
   font-size: 12px;
-  margin-top: 10px;
-  margin-bottom: 3px;
-  margin-left: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 3px;
+}
+
+.res_tag_center{
+  text-align: center;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 3px;
 }
 
 /* footers */
@@ -154,6 +159,129 @@ div.footer_box2 {
     width: 111px;
     padding-top: 5px;
 }
+
+
+/* popup */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-right {
+  padding-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 548px;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+#modal-content{
+    position: fixed;
+    left: 30px;
+    width: 260px;
+    height: 480px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+    float: center;
+    text-align: center;
+    padding: 10px;
+}
+#close{
+    font-size: 20pt;
+    position: fixed;
+    top: 96px;
+}
+#pop_img{
+    float: left;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+#pop_text{
+    float: center;
+    font-size: 16pt;
+}
+#a_line2{
+    width: 220px;
+    height: 1.5px;
+    background-color:#C4C4C4;
+    text-align: center;
+    margin-left: 15px;
+}
+#pop_box{
+    width: 210px;
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+#pop_grey{
+    text-align: left;
+    padding-left: 10px;
+    height: 20px;
+    background-color:#C4C4C4;
+    padding-top: 3px;
+    font-size: 10pt;
+}
+#pop_white{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 6pt;
+}
+#pop_white2{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    padding: 2px;
+    font-size: 8pt;
+}
+#pop_white3{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 6pt;
+}
+#a_line3{
+    height: 1px;
+    background-color:black;
+    text-align: center;
+}
+#pop_to_post{
+    text-align: center;
+    font-size: 7pt;
+    margin-left: 29px;
+    margin-top: 15px;
+}
+
+.image-container{
+  margin-left: 20px;
+  margin-top: 5px;
+  width: 210px;
+  height: 160px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: #888888 3px 2px;
+}
+.image-container img {
+  object-fit: cover;
+}
+
+.no-underline-a {
+  text-decoration:none;
+}
 </style>
 </head>
 
@@ -174,7 +302,7 @@ div.footer_box2 {
         <div id="search_input" style="padding-left: 3px;">
           <input type="search" id="search_box" placeholder="Search User posts ..." size="12">
         </div>
-        <a href="./write_post(online).html">
+        <a href="./write_post.html">
           <button type="submit" id="write_post" >
             <div id='write_post_svg' style="padding-top:3px;">
               <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="16"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
@@ -241,7 +369,7 @@ div.footer_box2 {
             </div>
           </div>
           <div id='one_result'>
-            <a href="posts(popup).html"><img src="./image/wholefoods.jpg" alt="WHOLEFOODS" width="150px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;"></a>
+            <img src="./image/wholefoods.jpg" alt="WHOLEFOODS" width="150px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
             <div id="res_text">It is strawberry season now, and there is an extra 10% off in WholeFoods.</div>
             <div id="res_tag">
               <a href="./posts.html">#WholeFoods</a>
@@ -256,7 +384,7 @@ div.footer_box2 {
         </div>
         <div id='one_column'>
           <div id='one_result'>
-            <a href="posts(popup).html"><img src="./image/wholefoods.jpg" alt="MATLAB" width="150px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;"></a>
+            <img src="./image/wholefoods.jpg" alt="MATLAB" width="150px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
             <div id="res_text">It is strawberry season now, and there is an extra 10% off in WholeFoods.</div>
             <div id="res_tag">
               <a href="./posts.html">#WholeFoods</a>
@@ -282,7 +410,65 @@ div.footer_box2 {
           </div>
         </div>
       </div>
-     
+
+      <!-- popup -->
+      <div class="modal">
+        <!-- Modal content -->
+        <div id="modal-content">
+            <div class="wrapper">
+              <div id='pop_text'>Whole Foods Strawberry</div>
+              <div><a href="./posts.html"><span style="margin-left: 5px;" id="close">&times;</span></a></div>
+            </div>
+
+            <div class="wrapper-right">
+                <div id="res_tag">
+                    <img src="./image/liked.png" alt="unliked" width="10px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
+                    unlike
+                </div>
+                <div id="res_tag">
+                    <img src="./image/share.png" alt="unliked" width="10px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
+                    share
+                </div>
+            </div>
+
+            <div id="a_line2"></div>
+            <div>
+            <div class="res_tag_center">
+              <a class="no-underline-a" href="./posts.html">#grocery </a>
+              <a class="no-underline-a" href="./posts.html">#strawberry </a>
+              <a class="no-underline-a" href="./posts.html">#wholefoods </a>
+            </div>
+
+            </div>
+            <div class="image-container" >
+                <img src="./image/wholefoods.jpg">
+            </div>
+
+            <div id='pop_box'>
+                <div id='pop_grey'> Location </div>
+                <div id="a_line3"></div>
+                <div id='pop_white2'>
+                    1025 Gilman St, Berkeley, CA 94710
+                </div>
+                <div id="a_line3"></div>
+                <div id='pop_grey'>Effective Time</div>
+                <div id="a_line3"></div>
+                <div id='pop_white2'>
+                    Ends on Sept. 23 <br>
+                    From  N/A  to  N/A 
+                </div>
+                <div id="a_line3"></div>
+                <div id='pop_grey'>Details</div>
+                <div id="a_line3"></div>
+                <div id='pop_white2'>
+                    It is strawberry season now, and there is an extra 10% off  at WholeFoods with Student ID.
+                </div>
+            </div>
+        </div>
+      </div>     
+
+
+
 
       <footer>
         <a href="./home(login).html">
