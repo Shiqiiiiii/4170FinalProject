@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+  	div.outter {
+	    background-color: white;
+	    width: 333px;
+	    height: 716px;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    border: 2px solid black;
+	    transform: translate(-50%, -50%);
+	    -webkit-transform: translate(-50%, -50%);
+	    -moz-transform: translate(-50%, -50%);
+	    -o-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+  	}
+  	/* headers */
+  	header{
+	    font-family: Stoke;
+	    font-size: 34px;
+	    text-align: center;
+	    color: #000000;
+	    float: left;
+	    width: 333px;
+  	}
+  	/* footers */
+	footer {
+	  	position: fixed;
+	  	bottom: 0;
+	  	height: 68px;
+	  	width: 333px;
+	  	background-color:#C4C4C4;
+	  	color: black;
+	  	float:left;  
+  	}
+	div.footer_box {
+	    float:left;  
+	    font-family: Stoke;
+	    font-weight: 300;
+	    font-size: 16px;
+	    text-align: center;
+	    height: 63px;
+	    width: 111px;
+	    padding-top: 5px;
+	    background-color: #979696;
+	}
+	div.footer_box2 {
+	    float:left;  
+	    font-family: Stoke;
+	    font-weight: 300;
+	    font-size: 16px;
+	    text-align: center;
+	    height: 63px;
+	    width: 111px;
+	    padding-top: 5px;
+	}
+	#left_arrow{
+	    position: absolute;
+	    left: 10px;
+	}
+	#user_info{
+	  	text-align: center;
+	  	font-size: 18px;
+	  	margin-top: 40px;
+	}
+	#user_info2{
+	  	text-align: center;
+	  	font-size: 18px;
+	  	margin-top: 10px;
+	}
+	#a_line{
+	    width: 300px;
+	    height: 1.5px;
+	    background-color:black;
+	    text-align: center;
+	    margin-top: 50px;
+	    margin-left: 15px;
+	}
+
+	/* body */
+	#filterbar{
+	  height: 29px;
+	  margin-top: 10px;
+	  margin-left: 20px;
+	  color: black;
+	  float:left;  
+	}
+	#filterbar_box{
+	    float:left; 
+	    font-size: 12px;
+	    text-align: left;
+	    border: 1px solid black;
+	    background-color:#C4C4C4;
+	    padding-left: 10px;
+	    padding-right: 10px;
+	    margin-left: 3px;
+	}
+	#filterbar_box2{
+	    float:left;  
+	    font-size: 12px;
+	    text-align: left;
+	    border: 1px solid black;
+	    background-color: #979696;
+	    padding-left: 10px;
+	    padding-right: 10px;
+	    margin-left: 3px;
+	}
+	#NA_box{
+	    float:left; 
+	    font-size: 12px;
+	    text-align: center;
+	    border: 1px solid black;
+	    background-color:white;
+	    padding-left: 10px;
+	    padding-right: 10px;
+	    margin-left: 3px;
+	}
+	#search_result{
+	    margin-top: 10px;
+	    overflow: auto; 
+	    height: 500px; 
+	    width: 328px;
+	    margin-left: 1px;
+	    text-align: center;
+	    /*border: 1px solid black;*/
+	}
+	#one_result{
+	    height: 170px; 
+	    width: 310px;
+	    margin-left: 10px;
+	    border: 1px solid black;
+	    margin-top: 5px;
+	    float:left;  
+	}
+	#res_img{
+	    float:left;
+	    margin-left: 5px;
+	    margin-top: 8px;
+	}
+	#res_title{
+	    text-align: center;
+	    font-size: 20px;
+	    margin-top: 8px;
+	    margin-left: 5px;
+	}
+	#res_content{
+	    float:left;
+	    width: 210px;
+	    height: 76px;
+	    font-size: 10px;
+	    margin-left: 8px;
+	    text-align: left;
+	}
+	#res_end{
+	    float:left;
+	    font-size: 14px;
+	    margin-left: 10px;
+	    margin-bottom: 6px;
+	}
+	#res_mark{
+	    float:right;
+	    font-size: 14px;
+	    margin-right: 10px;
+	    margin-bottom: 6px;
+	}	
+	#edit{
+	  float:left;
+	  text-align: center;
+	  margin-bottom: 20px; 
+	  margin-left: 10px;
+	  height: 25px; 
+	  width: 90px; 
+	  font-size: 15px;
+	  font-weight: bold;
+	  font-family: Stoke;
+	  cursor: pointer;
+	  background-color: transparent;
+	  border: 2px solid #000000;
+	  border-radius: 5px;
+	  box-shadow: 0px 3px 5px grey;
+	}
+	#delete{
+	  float:right;
+	  text-align: center;
+	  margin-bottom: 20px; 
+	  margin-right: 10px;
+	  height: 25px; 
+	  width: 90px; 
+	  font-size: 15px;
+	  font-weight: bold;
+	  font-family: Stoke;
+	  cursor: pointer;
+	  background-color: transparent;
+	  border: 2px solid #000000;
+	  border-radius: 5px;
+	  box-shadow: 0px 3px 5px grey;
+	}
+	/* https://css-tricks.com/the-checkbox-hack/ */
+	.control-me::after{
+		content:"  mark";
+	}
+	#mark:checked~ .control-me::after{
+		content:"unmark";
+	}
+	#search{
+    margin-top: 20px;
+  height: 45px;
+  width: 120px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Stoke;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px grey;
+  }
+  #search_bar, #search_input{
+  text-align: center;
+  color: black;
+  float: left;
+}
+#search_svg{
+  position: absolute;
+  margin-top: 6px;
+  margin-left: 4px;
+}
+#search_box{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left:10px;
+    height: 60px;
+    font-size: 12pt;
+    border-radius: 25px;
+    text-indent: 20px;
+    text-align: left;
+    box-shadow: 0px 3px 5px grey;
+    -webkit-appearance:textfield;
+    height: 35px;
+    width: 200px;
+}
+#write_post{
+    float:right;
+    text-align: right;
+    margin-top: 12px; 
+    margin-left: 40px;
+    height: 30px; 
+    width: 70px; 
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Stoke;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px grey;
+  }
+  /*
+#write_post{
+    font-size: 10pt;
+    margin-top: 8px;
+    margin-left: 2px;
+}*/
+#write_post_svg, #write_post_text{
+  float:left;  
+}
+	</style>
+</head>
+
+<body>
+  <div class='outter'>
+      <header>
+        <a href="./home.html" id="left_arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 24 24" width="26"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+        </a>
+        <img style="float: left; margin-top: 30px; margin-left: 30px;" src="./image/user_img.png" alt="IMG" width="120px"id="res_img" style="margin-top: 5px;  margin-left: 1.5px;">
+        <div id="user_info">Username: Admin</div>
+        <div id="user_info2">School: UBC</div>
+        <div id="a_line"></div>
+      </header>
+
+      <div id="search_bar">
+            <div id="search_svg" style="padding-top: 8px; padding-left: 20px; padding-top: 13px">
+              <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </div>
+            <div id="search_input" style="padding-left: 5px;">
+              <input type="search" id="search_box" placeholder= "&nbsp; MatLab">
+            </div>
+
+            <a href="user_profile(admin_add).html">
+        	<button type="submit" id="write_post" >
+            <div id='write_post_svg' style="padding-top:3px;">
+              <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="16"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+            </div>
+            <div id='write_post_text' style="padding-left:6px; padding-top:3px">Add</div>
+          </button>
+          </a>
+  	</div>
+
+  	<div id='search_result'>
+        <div id='one_result'>
+            <img src="./image/matlab.png" alt="MATLAB" width="80px" height="60px" id="res_img">
+            <div>
+                <div id='res_title'>MATLAB</div>
+                <p id='res_content'>MATLAB is now available to active and registered UBC students at no cost!</p>
+            </div>
+            <div id='res_end'>
+            	<a href="user_profile(admin_edit).html">
+            	<button type="submit" id="edit">Edit</button>
+            	</a>
+            </div>
+            <div id='res_mark'>
+            	<a href="./user_profile(admin_delete).html">
+                <button type="submit" id="delete">Delete</button>
+            	</a>
+            </div>
+        </div>
+      </div>
+
+      <footer>
+        <a href="./home(login).html">
+          <div class="footer_box2">
+            <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 0 24 24" width="36"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <br>home
+          </div>
+        </a>
+        <a href="./posts.html">
+          <div class="footer_box2">
+            <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 0 24 24" width="36"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            <br>posts
+        </div>
+        </a>
+        <a  href="./user_pofile(benefit).html">
+          <div class="footer_box">
+            <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 0 24 24" width="36"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"/></svg>
+            <br>me
+          </div>
+        </a>
+      </footer>
+  </div>
+</body>
+</html>
