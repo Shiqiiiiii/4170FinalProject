@@ -30,21 +30,21 @@ header{
     left: 10px;
 }
 #user_info{
-  text-align: center;
-  font-size: 18px;
-  margin-top: 45px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 40px;
 }
 #user_info2{
-  text-align: center;
-  font-size: 18px;
-  margin-top: 25px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
 }
 #a_line{
     width: 300px;
     height: 1.5px;
     background-color:black;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-left: 15px;
 }
 
@@ -142,6 +142,55 @@ div.footer_box2 {
     width: 111px;
     padding-top: 5px;
 }
+#Calendar{
+    float:left;
+    text-align: center;
+    margin-top: 10px; 
+    margin-left: 40px;
+    height: 25px; 
+    width: 100px; 
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Stoke;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px grey;
+  }
+/*
+  .checkbox input[type="checkbox"] {
+    opacity:0;
+  }
+  .checkbox label::before{
+    content: "";
+    background-image: url(./image/liked.png);
+    background-size: 20px 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    margin-left: -20px;
+  }
+  .checkbox label::after{
+    content: "";
+    background-image: url(./image/unliked.png);
+    background-size: 20px 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    margin-left: -53px;
+  }
+
+  .checkbox input[type="checkbox"] + label::before{
+    content: "";
+  }
+  .checkbox input[type="checkbox"]:checked + label::after{
+    content: none;
+} */
+
+
 </style>
 </head>
 
@@ -154,6 +203,9 @@ div.footer_box2 {
         <img style="float: left; margin-top: 30px; margin-left: 30px;" src="./image/user_img.png" alt="IMG" width="120px"id="res_img" style="margin-top: 5px;  margin-left: 1.5px;">
         <div id="user_info">Username: Alice</div>
         <div id="user_info2">School: UBC</div>
+        <div id="cal_button">
+          <button type="submit" id="Calendar">Calendar</button>
+        </div>
         <div id="a_line"></div>
       </header>
 
@@ -184,8 +236,14 @@ div.footer_box2 {
               <a href="./posts.html">#Topshop</a>
             </div>
             <div id="res_tag">
-              <input type="checkbox" id="like_check" checked>
-              Like
+              <img src="./image/liked.png" width="20" heighr="20">
+              <span>Unlike</span>
+            <!--  
+
+                <input type="checkbox" id="like_check" checked="checked"/>
+                <label for="like_check"></label>
+          
+             -->
             </div>
           </div>
         </div>
@@ -198,8 +256,12 @@ div.footer_box2 {
               <a href="./posts.html">#UBC</a>
             </div>
             <div id="res_tag">
+              <img src="./image/liked.png" width="20" heighr="20">
+              <span>Unlike</span>
+              <!--
               <input type="checkbox" id="like_check" checked>
               Like
+              -->
             </div>
           </div>
         </div>
