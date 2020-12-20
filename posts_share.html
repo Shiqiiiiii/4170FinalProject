@@ -190,7 +190,7 @@ div.footer_box2 {
     position: fixed;
     left: 30px;
     width: 260px;
-    height: 480px;
+    height: 410px;
     border-radius: 10px;
     background-color: white;
     border: 1px solid black;
@@ -211,13 +211,18 @@ div.footer_box2 {
 #pop_text{
     float: center;
     font-size: 16pt;
+    font-family: Stoke;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
 }
 #a_line2{
-    width: 220px;
+    width: 250px;
     height: 1.5px;
     background-color:#C4C4C4;
     text-align: center;
-    margin-left: 15px;
+    margin-left: 6px;
 }
 #pop_box{
     width: 210px;
@@ -234,19 +239,20 @@ div.footer_box2 {
     padding-top: 3px;
     font-size: 10pt;
 }
-#pop_white{
+#pop_white1{
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 6pt;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-size: 12pt;
+    margin-left: 10px;
 }
 #pop_white2{
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 0px;
+    margin-left: 10px;
     padding: 2px;
-    font-size: 8pt;
+    font-size: 10pt;
 }
 #pop_white3{
     text-align: center;
@@ -267,13 +273,13 @@ div.footer_box2 {
 }
 
 .image-container{
-  margin-left: 20px;
   margin-top: 5px;
+  margin-left: 14px;
   width: 210px;
   height: 160px;
   display: flex;
   overflow: hidden;
-  box-shadow: #888888 3px 2px;
+  box-shadow: #979696 1px 1px;
 }
 .image-container img {
   object-fit: cover;
@@ -281,6 +287,13 @@ div.footer_box2 {
 
 .no-underline-a {
   text-decoration:none;
+}
+
+.share_pic_container {
+    margin: 10px;
+    border: 1px black solid;
+    text-align: center;
+    box-shadow: #979696 1px 1px;
 }
 </style>
 </head>
@@ -416,53 +429,35 @@ div.footer_box2 {
         <!-- Modal content -->
         <div id="modal-content">
             <div class="wrapper">
-              <div id='pop_text'>Whole Foods Strawberry</div>
-              <div><a href="./posts.html"><span style="margin-left: 5px;" id="close">&times;</span></a></div>
-            </div>
-
-            <div class="wrapper-right">
-                <div id="res_tag">
-                    <img src="./image/liked.png" alt="unliked" width="10px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
-                    unlike
-                </div>
-                <div id="res_tag">
-                    <a href="./posts_share.html"><img src="./image/share.png" alt="unliked" width="10px"id="res_img" style="margin-top: 5px; margin-left: 1.5px;">
-                      share</a>
-                </div>
+              <div id='pop_text' style="width: 210px;">Share Post</div>
+              <div><a href="./posts(popup).html"><span style="margin: 5px;" id="close">&times;</span></a></div>
             </div>
 
             <div id="a_line2"></div>
+
+            <div class='share_pic_container'>
+                <div id='pop_white1'>
+                    I fond this from the <b>Benefit</b> app: <br>
+                    Whole Foods Strawberry
+                </div>
+                <div class="res_tag_center">
+                    <a class="no-underline-a" href="./posts.html">#grocery </a>
+                    <a class="no-underline-a" href="./posts.html">#strawberry </a>
+                    <a class="no-underline-a" href="./posts.html">#wholefoods </a>
+                </div>
+                <div class="image-container" >
+                        <img src="./image/wholefoods.jpg">
+                </div>
+                <div id='pop_white2'>
+                    It is strawberry season now, and there is an extra 10% off in Whole Foods with...
+                </div>
+            </div>
+
+            <div id='pop_white1' style="text-align: left;">
+                Share as a pic to ...
+            </div>
             <div>
-            <div class="res_tag_center">
-              <a class="no-underline-a" href="./posts.html">#grocery </a>
-              <a class="no-underline-a" href="./posts.html">#strawberry </a>
-              <a class="no-underline-a" href="./posts.html">#wholefoods </a>
-            </div>
-
-            </div>
-            <div class="image-container" >
-                <img src="./image/wholefoods.jpg">
-            </div>
-
-            <div id='pop_box'>
-                <div id='pop_grey'> Location </div>
-                <div id="a_line3"></div>
-                <div id='pop_white2'>
-                    1025 Gilman St, Berkeley, CA 94710
-                </div>
-                <div id="a_line3"></div>
-                <div id='pop_grey'>Effective Time</div>
-                <div id="a_line3"></div>
-                <div id='pop_white2'>
-                    Ends on Sept. 23 <br>
-                    From  N/A  to  N/A 
-                </div>
-                <div id="a_line3"></div>
-                <div id='pop_grey'>Details</div>
-                <div id="a_line3"></div>
-                <div id='pop_white2'>
-                    It is strawberry season now, and there is an extra 10% off  at WholeFoods with Student ID.
-                </div>
+                <img src="./image/share_apps.png" alt="share_to" width="240px"id="res_img">
             </div>
         </div>
       </div>     
