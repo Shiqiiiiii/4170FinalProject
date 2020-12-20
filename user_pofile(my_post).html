@@ -57,25 +57,31 @@ header{
   float:left;  
 }
 #filterbar_box{
-    float:left; 
-    font-size: 12px;
-    text-align: left;
-    border: 1px solid black;
-    background-color:#C4C4C4;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 3px;
-}
-#filterbar_box2{
-    float:left;  
-    font-size: 12px;
-    text-align: left;
-    border: 1px solid black;
-    background-color: #979696;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 3px;
-}
+      float:left; 
+      font-size: 14px;
+      text-align: center;
+      line-height: 10px;
+      border: 1px solid black;
+      background-color:#C4C4C4;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-left: 3px;
+      font-family: Stock;
+      height: 28px;
+  }
+  #filterbar_box2{
+      float:left;  
+      font-size: 14px;
+      text-align: center;
+      line-height: 10px;
+      border: 1px solid black;
+      background-color: #979696;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-left: 3px;
+      font-family: Stock;
+      height: 28px;
+  }
 #search_result{
     margin-top: 15px;
     overflow: auto; 
@@ -164,15 +170,19 @@ div.footer_box2 {
 <body>
   <div class='outter'>
       <header>
+        <!--
         <a href="./home.html" id="left_arrow">
           <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 24 24" width="26"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
         </a>
+      -->
         <img style="float: left; margin-top: 30px; margin-left: 30px;" src="./image/user_img.png" alt="IMG" width="120px"id="res_img" style="margin-top: 5px;  margin-left: 1.5px;">
         <div id="user_info">Username: Alice</div>
-        <div id="user_info2">School: UBC</div>
+        <div id="user_info2">School: UCB</div>
+        <a href="./calender.html">
         <div id="cal_button">
           <button type="submit" id="Calendar">Calendar</button>
         </div>
+        </a>
         <div id="a_line"></div>
       </header>
 
