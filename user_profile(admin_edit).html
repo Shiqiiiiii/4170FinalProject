@@ -174,7 +174,7 @@
 	    float:left;
 	    width: 210px;
 	    height: 76px;
-	    font-size: 10px;
+	    font-size: 12px;
 	    margin-left: 8px;
 	    text-align: left;
 	}
@@ -209,7 +209,7 @@
 	#done{
 	  text-align: center;
 	  margin-bottom: 20px; 
-	  margin-top: 8px;
+	  margin-top: 12px;
 	  margin-left: 80px;
 	  height: 20px; 
 	  width: 90px; 
@@ -486,6 +486,18 @@ input:checked + .slider .off
 	font-size: 16px;
 	margin-left: 10px;
 }
+#endson{
+	float: left;
+	font-size: 16px;
+	margin-left: 10px;
+	margin-top:  10px;
+}
+#openinghour{
+	float: left;
+	font-size: 16px;
+	margin-left: 10px;
+	margin-top:  5px;
+}
 #description_box{
 	margin-left: 30px;
 	border:1px solid black;
@@ -500,12 +512,14 @@ input:checked + .slider .off
 <body>
   <div class='outter'>
       <header>
+      	<!--
         <a href="./home.html" id="left_arrow">
           <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 24 24" width="26"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
         </a>
+    -->
         <img style="float: left; margin-top: 30px; margin-left: 30px;" src="./image/user_img.png" alt="IMG" width="120px"id="res_img" style="margin-top: 5px;  margin-left: 1.5px;">
         <div id="user_info">Username: Admin</div>
-        <div id="user_info2">School: UBC</div>
+        <div id="user_info2">School: UCB</div>
         <div id="a_line"></div>
       </header>
 
@@ -583,14 +597,17 @@ input:checked + .slider .off
 
 	        <div id="url">
 	        	<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="16"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+	        	<textarea id="urlbox" style="width: 200px;height:50px;">http://it.ubc.ca.services/desktop-print-services/software-licensing/matlab-students</textarea>
+	        	<!--
 	        	<textarea id="urlbox" rows="4", cols="23" form="usrform">http://it.ubc.ca.services/desktop-print-services/software-licensing/matlab-students</textarea>
+	        -->
 	        </div>
 
 	        <div id="description">
 	        	<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="16"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
             Description
 	        </div>
-	        <textarea id="description_box" rows="4", cols="23" form="usrform">MATLAB is now available to active and registered UBC students at no cost!</textarea>
+	        <textarea id="description_box" rows="3", cols="23" form="usrform">MATLAB is now available to active and registered UBC students at no cost!</textarea>
 
 	        <div id="description">
 	        	<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="16"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
@@ -617,7 +634,7 @@ input:checked + .slider .off
 	        	<div id="NA_box2">N/A</div>
 	    	</div>
 
-	    	<div id="description">
+	    	<div id="endson">
 	    		<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="16"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
 	    	Ends on:
 	    		<div id="NA_box3">N/A</div>
