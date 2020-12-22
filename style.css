@@ -78,7 +78,7 @@ splash-screen start
 .hb-screen {
     /*! min-height: 100vh; */  
     background-color: #fff;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 /*
@@ -143,10 +143,10 @@ homepage blank start
 }
 
 .su-slt select {
-    width: 100%;
+    width: 95%;
     display: block;
     font-size: 12px;
-    padding: 4px 5px;
+    padding: 5px;
     text-align: left;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-left: 5px;
@@ -178,7 +178,9 @@ homepage blank start
 }
 
 .soft-area {
-    padding: 5px 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
 }
 
 .su-sltp1, .su-sltp2, .su-sltp3  {
@@ -189,7 +191,7 @@ homepage blank start
     width: 100%;
     display: block;
     font-size: 12px;
-    padding: 4px 0px;
+    padding: 4px;
     text-align: left;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
     border: 1px solid #000000;
@@ -202,7 +204,7 @@ homepage blank start
     width: 100%;
     display: block;
     font-size: 12px;
-    padding: 4px 0px;
+    padding: 4px;
     text-align: left;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
     border: 1px solid #000000;
@@ -215,7 +217,7 @@ homepage blank start
     width: 100%;
     display: block;
     font-size: 12px;
-    padding: 4px 0px;
+    padding: 4px;
     text-align: left;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
     border: 1px solid #000000;
@@ -366,24 +368,25 @@ homepage blank start
 
 
 .all-area {
-    padding: 20px 0;
+   padding: 5px 0;
    height: 468px;
    overflow-x: scroll;
-   padding-right: 15px
+   padding-right: 5px
 }
 
 
 .calen-all {
    height: 609px;
    overflow-x: scroll;
-   padding-right: 15px 
+   padding-right: 10px 
 }
 
 
 
 .micro-area {
     border: 1px solid #000000;
-    padding: 15px 10px 10px;
+    padding: 5px;
+    margin-right: 0px;
     margin-bottom: 15px;
 }
 
@@ -485,7 +488,8 @@ homepage blank start
 .all-area {
    height: 525px;
    overflow-x: scroll;
-   padding-right: 15px
+   padding-right: 0px;
+   padding-left: 5px;
 }
 
 .mera-btn {

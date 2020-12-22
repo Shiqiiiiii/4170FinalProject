@@ -62,10 +62,10 @@
     return target;
   }
 
-  function _inheritsLoose(subClass, superClass) {
-    subClass.prototype = Object.create(superClass.prototype);
-    subClass.prototype.constructor = subClass;
-    subClass.__proto__ = superClass;
+  function _inheritsLoose(sUCBlass, superClass) {
+    sUCBlass.prototype = Object.create(superClass.prototype);
+    sUCBlass.prototype.constructor = sUCBlass;
+    sUCBlass.__proto__ = superClass;
   }
 
   /**
